@@ -17,7 +17,7 @@
     @include font(28px, 26px, 400, $secondary-family);
 
     @include media-breakpoint-up(md) {
-      max-width: 358px;
+      max-width: 450px;
       padding-bottom: 28px;
       @include font(42px, 44px, 400, $secondary-family);
     }
@@ -283,6 +283,10 @@
     overflow: hidden;
     position: relative;
     margin-inline: -16px;
+
+    @include media-breakpoint-up(md) {
+      margin-inline: 0;
+    }
   }
 
   &__label {
