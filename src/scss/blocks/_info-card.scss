@@ -1,0 +1,56 @@
+.info-card {
+    --info-card-bg-color: var(--c-base-color);
+    --info-card-text-color: var(--c-main-primary-color);
+
+    background-color: var(--info-card-bg-color);
+    border-radius: 8px;
+    padding: 18px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    @include font(14px, 12px);
+
+
+    @include media-breakpoint-up(md) {
+        padding-block: 22px;
+        padding-inline: 22px 32px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-block: 24px;
+        padding-inline: 24px 36px;
+    }
+
+    &._active {
+        display: flex;
+    }
+
+    &__title {
+        color: var(--info-card-text-color);
+        padding-bottom: 18px;
+        @include font(28px, 34px, 400, $secondary-family); 
+            
+        @include media-breakpoint-up(md) {
+            @include font(42px, 46px, 400, $secondary-family); 
+        } 
+    }
+
+    &__text {
+        color: var(--info-card-text-color);
+        @include font(14px, 20px); 
+        
+        @include media-breakpoint-up(md) {
+            @include font(16px, 18px); 
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__btn {
+        @include font(14px, 16px); 
+    }
+}

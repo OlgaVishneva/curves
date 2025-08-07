@@ -1,0 +1,21 @@
+.screen-card {
+    --screen-card-color: var(--c-base-color);
+    --screen-card-gradient-color: var(--c-gradient-color);
+
+    border-radius: 8px;
+    background: var(--screen-card-gradient-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 28px;
+    box-sizing: border-box;
+    color: var(--screen-card-color);
+    display: none;
+    @include font(14px, 12px);
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

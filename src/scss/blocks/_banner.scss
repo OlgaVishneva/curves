@@ -1,0 +1,36 @@
+.banner {
+    --banner-border-color: var(--c-base-color);
+    --banner-text-color: var(--c-base-color);
+
+    position: relative;
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: #1E1E1E42;
+    border: 1px dashed var(--banner-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include font(9px, 12px);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: inherit;
+        filter: blur(4px);
+        z-index: -1;
+    }
+
+    &__text {
+        color: var(--banner-text-color);
+        max-width: 188px;
+        @include font(9px, 12px);  
+    }
+
+    &__icon {
+        width: 23px;
+        height: 17px;
+        flex-shrink: 0;
+        fill: none;
+    }
+}

@@ -1,0 +1,16 @@
+.section {
+  --section-bg-color: var(--c-base-primary-color);
+  --section-indent: 38px;
+
+  @include media-breakpoint-up(md) {
+    padding-block: 50px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-block: 82px;
+  }
+
+  background-color: var(--section-bg-color);
+  padding-block: var(--section-indent);
+  @include font(12px, 20px);
+}

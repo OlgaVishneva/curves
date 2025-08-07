@@ -1,0 +1,62 @@
+.btn {
+  --btn-gap-x: 4px;
+
+  position: relative;
+  padding: calc(var(--btn-gap-x) - 2px) 32px;
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  @include font(18px, 20px);
+
+  cursor: pointer;
+  vertical-align: top;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+  user-select: none;
+  border-radius: 8px;
+  color: var(--btn-color);
+  background-color: var(--btn-bg-color);
+  border-color: var(--btn-border-color);
+  transition-property: opacity;
+  transition-duration: $animation-speed;
+  transition-timing-function: $animation-function;
+  letter-spacing: -0.4px;
+
+  @include hover {
+    opacity: 0.9;
+  }
+
+  &:disabled,
+  &._disabled {
+    pointer-events: none;
+  }
+
+  &--primary {
+    //Button color
+    --btn-color: var(--c-base-color);
+    --btn-bg-color: var(--c-main-primary-color);
+    --btn-border-color: var(--c-main-primary-color);
+  }
+
+  &--secondary {
+    //Button color
+    --btn-color: var(--c-main-primary-color);
+    --btn-bg-color: var(--c-main-primary-emphasis-color);
+    --btn-border-color: var(--c-main-primary-emphasis-color);
+  }
+
+  &--size-large {
+    --btn-side-space: 22px;
+
+    padding: 16px var(--btn-side-space);
+  }
+
+  &--size-small {
+    --btn-side-space: 15px;
+
+    padding: 9px var(--btn-side-space);
+  }
+}
