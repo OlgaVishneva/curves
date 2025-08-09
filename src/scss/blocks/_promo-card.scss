@@ -19,12 +19,21 @@
         grid-template-rows: repeat(2, 62px);
     }
 
+    @include media-breakpoint-up(lg) {
+        grid-template-rows: repeat(2, 57px);
+    }
+
     &__option {
         display: flex;
         justify-content: flex-start;
         box-sizing: border-box;
-        padding: 1.4rem;
+        padding: 14px;
         cursor: pointer;
+
+
+    @include media-breakpoint-up(md) {
+        padding: 10px;
+    }
 
         &--one-position {
             justify-content: flex-end;
