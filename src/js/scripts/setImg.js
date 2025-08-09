@@ -3,6 +3,7 @@ export default function setImg() {
     const giftImage = document.getElementById('giftImage');
     const infoCard = document.querySelector('.promo__info-card');
     const promoBanner = document.querySelector('.promo__banner');
+    const promoIcon = document.querySelector('.promo__icon-nav');
     const buttonHowTo = infoCard.querySelector('.info-card__btn');
     const buttonReturn = document.createElement('button');
 
@@ -17,6 +18,7 @@ export default function setImg() {
         // Определяем путь к изображению в зависимости от ширины экрана
         if (screenWidth >= 768) {
             promoBanner.style.display = 'none'; // Скрыть баннер
+            promoIcon.style.display = 'block'; // Скрыть баннер
             // Изображения для экранов больше 768 пикселей
             switch (color) {
                 case 'color-blue':
@@ -36,6 +38,7 @@ export default function setImg() {
             }
         } else {
             promoBanner.style.display = 'block';
+            promoIcon.style.display = 'none';
             switch (color) {
                 case 'color-blue':
                     imagePath = 'img/bg/bg-img-blue.webp';

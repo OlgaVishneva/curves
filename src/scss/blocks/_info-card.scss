@@ -31,7 +31,12 @@
         @include font(28px, 34px, 400, $secondary-family); 
             
         @include media-breakpoint-up(md) {
+            padding-bottom: 12px;
             @include font(42px, 46px, 400, $secondary-family); 
+        } 
+            
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 16px;
         } 
     }
 

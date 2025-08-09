@@ -2,6 +2,7 @@
   --promo-color: var(--c-main-color);
   --promo-text-color: var(--c-main-primary-color);
   --promo-border-color: var(--c-main-primary-color);
+  --promo-icon-color: var(--c-base-color);
   --promo-bg-color: var(--c-main-primary-emphasis-color);
 
   display: flex;
@@ -154,6 +155,7 @@
     align-items: center;
     border: 1px solid var(--promo-bg-color);
     border-radius: 8px;
+    transition: background-color $animation-speed $animation-function;
 
 
     @include media-breakpoint-up(md) {
@@ -184,13 +186,13 @@
     align-items: center;
     justify-content: center;
     padding: 14px;
-    transition: width 0.2s ease, border 0.2s ease;
+    transition: width $animation-speed $animation-function, border $animation-speed $animation-function;
     position: relative;
     cursor: pointer;
 
     @include hover {
       border: 1px solid var(--promo-border-color);
-      transition: width 0.2s ease;
+      transition: width $animation-speed $animation-function;
     }
   }
 
@@ -260,9 +262,17 @@
     left: 16px;
 
 
+    @include media-breakpoint-up(md) {
+      min-height: 315px;
+      inset-inline: 92px;
+      inset-block: 83px;
+    }
+
     @include media-breakpoint-up(lg) {
       margin: 0 auto;
       max-width: 488px;
+      inset-inline: 42px;
+      inset-block: 81px;
     }
   }
 
@@ -280,16 +290,36 @@
 
   &__img {
     display: none;
+    height: 100%;
   }
 
   &__wrapper {
     overflow: hidden;
     position: relative;
     margin-inline: -16px;
+    
 
     @include media-breakpoint-up(md) {
       margin-inline: 0;
     }
+
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      display: flex;
+      background-blend-mode: color;
+      border-radius: 8px;
+    }
+  }
+
+  &__icon-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 43px;
+    height: 40px;
+    fill: none;
+    color: var(--promo-icon-color);
+    display: none;
   }
 
   &__label {
