@@ -18,4 +18,16 @@
         align-items: center;
         justify-content: center;
     }
+
+    &__wrapper {
+        display: inline-block;
+        position: relative;
+    }
+
+    &__massage {
+        display: inline;
+        white-space: pre-wrap;
+        word-break: break-word;
+        @include font(14px, 16px);
+    }
 }
